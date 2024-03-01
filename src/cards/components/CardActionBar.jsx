@@ -24,7 +24,6 @@ export default function CardActionBar() {
         <Checkbox
           icon={<FavoriteBorder />}
           checkedIcon={<Favorite />}
-          Checked
           color="error"
         />
       </Box>

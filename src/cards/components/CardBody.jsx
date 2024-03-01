@@ -3,7 +3,6 @@ import {
   CardContent,
   CardHeader,
   Divider,
-  Box,
   Typography,
 } from "@mui/material";
 
@@ -15,7 +14,7 @@ export default function CardBody({
   cardNumber,
 }) {
   return (
-    <Box>
+    <>
       <CardHeader title={title} subheader={subtitle} />
       <Divider variant="middle" />
       <CardContent>
@@ -32,6 +31,6 @@ export default function CardBody({
           {cardNumber}
         </Typography>
       </CardContent>
-    </Box>
+    </>
   );
 }
