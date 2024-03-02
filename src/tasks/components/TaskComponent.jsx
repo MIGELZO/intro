@@ -16,7 +16,6 @@ export default function TaskComponent({task}) {
           {task[2]}
         </TableCell>
       </TableRow>
-
     </TableBody>
   )
 }
