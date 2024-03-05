@@ -7,13 +7,13 @@ export default function TaskComponent({task}) {
     <TableBody>
       <TableRow>
         <TableCell>
-          {task[0]}
+          {task.name}
         </TableCell>
         <TableCell>
-          {task[1]}
+          {task.date}
         </TableCell>
         <TableCell>
-          {task[2]}
+          {task.type}
         </TableCell>
       </TableRow>
     </TableBody>

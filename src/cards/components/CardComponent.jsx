@@ -16,7 +16,6 @@ function CardComponent({ card }) {
           cardNumber={card.bizNumber}
         />
       </CardActionArea>
-
         <CardActionBar/>
     </Card>
   );
