@@ -3,16 +3,16 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
-import TaskPageComponent from "./tasks/components/TasksPageComponent";
 import { Box } from "@mui/material";
-import CardPage from "./cards/components/CardPage";
+import Counter from "./components/Counter";
+
+
 
 function app() {
  
   return (
     <Box className="App">
-      <CardPage/>
-      <TaskPageComponent/>
+      <Counter/>
     </Box>
   );
 }
