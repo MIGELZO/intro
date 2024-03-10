@@ -8,7 +8,7 @@ import { Box } from "@mui/material";
 
 function app() {
   return (
-    <Box>
+    <Box className="App">
       <UserDetails />
     </Box>
   );

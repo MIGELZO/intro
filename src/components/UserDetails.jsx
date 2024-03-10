@@ -23,7 +23,7 @@ export default function UserDetails() {
         value={user.email}
         name="email"
         onChange={(e) => {
-          setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+          setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
         }}
       />
       <TextField
@@ -33,14 +33,13 @@ export default function UserDetails() {
         value={user.password}
         name="password"
         onChange={(e) => {
-          setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+          setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
         }}
       />
       <Button
         variant="contained"
         onClick={(e) => {
-          console.log(user.email);
-          console.log(user.password);
+          console.log(user);
         }}
       >
         Enter
