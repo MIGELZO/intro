@@ -4,7 +4,7 @@ import React from "react";
 
 const cards = [
   {
-    _id: "63765801e20ed868a69a62c4",
+    _id: 1,
     title: "first",
     subtitle: "subtitle",
     description: "testing 123",
@@ -27,7 +27,7 @@ const cards = [
     user_id: "63765801e20ed868a69a62c2",
   },
   {
-    _id: "63765802e20ed868a69a62c5",
+    _id: 2,
     title: "second",
     subtitle: "another subtitle",
     description: "more tests 456",
@@ -50,7 +50,7 @@ const cards = [
     user_id: "63765802e20ed868a69a62c3",
   },
   {
-    _id: "63765803e20ed868a69a62c6",
+    _id: 3,
     title: "third",
     subtitle: "third subtitle",
     description: "testing 789",
@@ -73,7 +73,7 @@ const cards = [
     user_id: "63765803e20ed868a69a62c4",
   },
   {
-    _id: "63765804e20ed868a69a62c7",
+    _id: 4,
     title: "fourth",
     subtitle: "fourth subtitle",
     description: "final test 012",
@@ -96,11 +96,29 @@ const cards = [
     user_id: "63765804e20ed868a69a62c5",
   },
 ];
+
 export default function CardPage() {
+  const handleCardDelete = () => {
+    console.log("You deleted card No.");
+  };
+
+  const handleCardLike = () => {
+    console.log("You liked card No.");
+  };
+
+  const handleCardEdit = (_id) => {
+    console.log("You edit card No.");
+  };
+
   return (
     <Container sx={{ display: "flex", flexWrap: "wrap" }}>
       {cards.map((card) => (
-        <CardComponent card={card} />
+        <CardComponent
+          card={card}
+          handleCardDelete={handleCardDelete}
+          handleCardLike={handleCardLike}
+          handleCardEdit={handleCardEdit}
+        />
       ))}
     </Container>
   );
