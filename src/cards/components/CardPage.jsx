@@ -96,7 +96,6 @@ const cards = [
     user_id: "63765804e20ed868a69a62c5",
   },
 ];
-
 export default function CardPage() {
   const handleCardDelete = (cardId) => {
     console.log("You deleted card No.", cardId);

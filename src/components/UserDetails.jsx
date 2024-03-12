@@ -4,6 +4,10 @@ import React, { useState } from "react";
 export default function UserDetails() {
   const [user, setUser] = useState({ email: "", password: "" });
 
+  const handleChange = (e) => {
+    setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
   return (
     <Box
       sx={{
@@ -22,9 +26,7 @@ export default function UserDetails() {
         variant="outlined"
         value={user.email}
         name="email"
-        onChange={(e) => {
-          setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
-        }}
+        onChange={handleChange}
       />
       <TextField
         label="Password:"
@@ -32,9 +34,7 @@ export default function UserDetails() {
         variant="outlined"
         value={user.password}
         name="password"
-        onChange={(e) => {
-          setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
-        }}
+        onChange={handleChange}
       />
       <Button
         variant="contained"
