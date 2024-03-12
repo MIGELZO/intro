@@ -9,15 +9,16 @@ export default function CardActionBar({
   handleCardDelete,
   handleCardLike,
   handleCardEdit,
+  cardId,
 }) {
   return (
     <CardActions sx={{ paddingTop: 0, justifyContent: "space-between" }}>
       <Box>
         <IconButton>
-          <DeleteIcon onClick={() => handleCardDelete()} />
+          <DeleteIcon onClick={() => handleCardDelete(cardId)} />
         </IconButton>
         <IconButton>
-          <ModeEditIcon onClick={() => handleCardEdit()} />
+          <ModeEditIcon onClick={() => handleCardEdit(cardId)} />
         </IconButton>
       </Box>
       <Box>
@@ -25,7 +26,7 @@ export default function CardActionBar({
           <CallIcon />
         </IconButton>
         <IconButton>
-          <Favorite onClick={() => handleCardLike()} />
+          <Favorite onClick={() => handleCardLike(cardId)} />
         </IconButton>
       </Box>
     </CardActions>

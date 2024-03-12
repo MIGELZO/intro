@@ -98,16 +98,16 @@ const cards = [
 ];
 
 export default function CardPage() {
-  const handleCardDelete = () => {
-    console.log("You deleted card No.");
+  const handleCardDelete = (cardId) => {
+    console.log("You deleted card No.", cardId);
   };
 
-  const handleCardLike = () => {
-    console.log("You liked card No.");
+  const handleCardLike = (cardId) => {
+    console.log("You liked card No.", cardId);
   };
 
-  const handleCardEdit = (_id) => {
-    console.log("You edit card No.");
+  const handleCardEdit = (cardId) => {
+    console.log("You edit card No.", cardId);
   };
 
   return (
