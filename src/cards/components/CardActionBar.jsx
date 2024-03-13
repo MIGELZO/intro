@@ -8,25 +8,28 @@ import CallIcon from "@mui/icons-material/Call";
 export default function CardActionBar({
   handleCardDelete,
   handleCardLike,
-  handleCardEdit,
   cardId,
 }) {
+  const handleCardEdit = (id) => {
+    console.log("Navigate to edit page for card", id);
+  };
+
   return (
     <CardActions sx={{ paddingTop: 0, justifyContent: "space-between" }}>
       <Box>
-        <IconButton>
-          <DeleteIcon onClick={() => handleCardDelete(cardId)} />
+        <IconButton onClick={() => handleCardDelete(cardId)}>
+          <DeleteIcon />
         </IconButton>
-        <IconButton>
-          <ModeEditIcon onClick={() => handleCardEdit(cardId)} />
+        <IconButton onClick={() => handleCardEdit(cardId)}>
+          <ModeEditIcon />
         </IconButton>
       </Box>
       <Box>
         <IconButton>
           <CallIcon />
         </IconButton>
-        <IconButton>
-          <Favorite onClick={() => handleCardLike(cardId)} />
+        <IconButton onClick={() => handleCardLike(cardId)}>
+          <Favorite />
         </IconButton>
       </Box>
     </CardActions>

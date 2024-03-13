@@ -7,7 +7,6 @@ function CardComponent({
   card,
   handleCardDelete,
   handleCardLike,
-  handleCardEdit,
 }) {
   return (
     <Card sx={{ width: 250, m: 2 }}>
@@ -25,7 +24,6 @@ function CardComponent({
         cardId={card._id}
         handleCardDelete={handleCardDelete}
         handleCardLike={handleCardLike}
-        handleCardEdit={handleCardEdit}
       />
     </Card>
   );

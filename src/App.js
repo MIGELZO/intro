@@ -4,13 +4,13 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import "./App.css";
 import { Box } from "@mui/material";
-import RegistrationForm from "./components/RegistrationForm";
+import CardPage from "./cards/components/CardPage";
 
 
 function app() {
   return (
     <Box className="App">
-      <RegistrationForm/>
+      <CardPage/>
     </Box>
   );
 }

@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Typography } from "@mui/material";
 import CardComponent from "./CardComponent";
 import React from "react";
 
@@ -96,27 +96,28 @@ const cards = [
     user_id: "63765804e20ed868a69a62c5",
   },
 ];
+
 export default function CardPage() {
-  const handleCardDelete = (cardId) => {
-    console.log("You deleted card No.", cardId);
+  const handleCardDelete = (id) => {
+    console.log("You deleted card No.", id);
   };
 
-  const handleCardLike = (cardId) => {
-    console.log("You liked card No.", cardId);
+  const handleCardLike = (id) => {
+    console.log("You liked card No.", id);
   };
 
-  const handleCardEdit = (cardId) => {
-    console.log("You edit card No.", cardId);
-  };
-
-  return (
+  return cards.length === 0 ? (
+    <Typography>
+      Oops.. it seems there are no business cards to display
+    </Typography>
+  ) : (
     <Container sx={{ display: "flex", flexWrap: "wrap" }}>
       {cards.map((card) => (
         <CardComponent
+          key={card._id}
           card={card}
           handleCardDelete={handleCardDelete}
           handleCardLike={handleCardLike}
-          handleCardEdit={handleCardEdit}
         />
       ))}
     </Container>
